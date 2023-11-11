@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tests List</title>
+    <link rel="stylesheet" href="/static/css/tests.css">
+</head>
+<body>
+<h1>CR Medical Center tests</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Test name</th>
+            <th>Description</th>
+            <th>Cost</th>
+            <th>Biologist ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for test in Tests %}
+        <tr>
+            <td>{{ test.ID_test }}</td>
+            <td>{{ test.name_test }}</td>
+            <td>{{ test.description }}</td>
+            <td>{{ test.cost }}</td>
+            <td>{{ test.ID_bio_id }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Medical Center</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <!-- Include Bootstrap CSS and JavaScript here if needed -->
+</head>
+
+<body>
+
+<header class="slideshow-header">
+    <div class="slideshow-container">
+        <img class="mySlides" src="{% static 'img/mri.jpg' %}">
+        <img class="mySlides" src="{% static 'img/xray.jpg' %}">
+        <img class="mySlides" src="{% static 'img/blood.jpg' %}">
+        <img class="mySlides" src="{% static 'img/microscope.jpg' %}">
+        <img class="mySlides" src="{% static 'img/scan.jpg' %}">
+
+        <script src="{% static 'js/homepage.js' %}"></script>
+
+    </div>
+    <h1>CR Medical Center</h1>
+</header>
+
+
+<nav>
+    <ul class="menu">
+        <li class="dropdown">
+            <a href="#" class="dropbtn menu-link">Home</a>
+            <div class="dropdown-content">
+                <!-- Add home-related links here -->
+            </div>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li class="dropdown">
+            <a href="#" class="dropbtn menu-link">About Us</a>
+            <div class="dropdown-content">
+                <a href="{% url 'biologists' %}" class="menu-link">Team</a>
+                <a href="{% url 'tests' %}" class="menu-link">Tests</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="menu">
+        <li class="dropdown">
+            <a href="#" class="dropbtn menu-link">Contact Us</a>
+            <div class="dropdown-content">
+                <!-- Add contact-related links here -->
+            </div>
+        </li>
+    </ul>
+    <!-- You can add more links as needed -->
+</nav>
+
+<section class="presentation" >
+       <h2>Who are we?</h2>
+    <p class="w3-justify">
+        CR Medical Center is a state-of-the-art medical testing center dedicated to providing comprehensive healthcare services. Our center offers a wide range of medical tests and diagnostics, all conducted by highly skilled healthcare specialists.
+        We are committed to delivering accurate and timely results to ensure your well-being and peace of mind.
+    </p>
+
+
+</section>
+
+
+
+<main>
+    <p>Providing high-quality medical services for your needs.</p>
+    <a href="#">Learn More</a>
+</main>
+
+<footer>
+    <p>&copy; 2023 CR Medical Center</p>
+</footer>
+</body>
+</html>

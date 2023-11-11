@@ -1,0 +1,162 @@
+/* Add this to your 'homepage.css' file */
+
+/* Reset default margin and padding for lists */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for your navigation */
+nav {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
+
+.menu {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Styles for the dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: deepskyblue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Center the "CR Medical Center" text in the header and give it a colored background */
+header {
+    text-align: center;
+    color: white;
+    padding: 50px ;
+
+}
+
+/* Add this to your CSS, e.g., homepage.css */
+.menu-link {
+    color: white; /* Text color for menu links */
+    text-decoration: none; /* Remove underlines from links */
+    padding: 16px; /* Spacing for menu links */
+    background-color: steelblue;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-link {
+    color: deepskyblue; /* Text color for main links */
+    text-decoration: none; /* Remove underlines from links */
+}
+main{
+    text-align: center;
+}
+
+/* Style the slideshow container and header */
+/* Style the slideshow container and header */
+.slideshow-header {
+    position: relative;
+    height: 25vh; /* Adjust the height as needed to control the header size */
+    overflow: hidden;
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mySlides {
+    width: 100%;
+    max-height: 100%; /* Adjust the height as needed for the images */
+    object-fit: cover;
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: xxx-large;
+
+}
+
+/* Style for the presentation section */
+.presentation {
+    max-width: 600px;
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+/* Style for the video within the presentation section */
+.presentation video {
+    display: block;
+    width: 100%;
+}
+
+/* Style for the paragraph within the presentation section */
+.presentation p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #333;
+}
+footer{
+    text-align: center;
+    margin-top: 20px;
+
+}
+/* Add additional styles or adjust these styles as needed to match your design preferences. */
+
