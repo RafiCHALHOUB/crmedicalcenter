@@ -9,8 +9,8 @@ class Patient(models.Model):
     )
 
     ID_patient = models.AutoField(primary_key=True)
-    firstname_patient = models.CharField(max_length=50)
-    lastname_patient = models.CharField(max_length=50)
+    firstname_patient = models.CharField(max_length=50, validators=[RegexValidator(r'^[a-zA-Z ]*$', message='Only letters and spaces are allowed.')])
+    lastname_patient = models.CharField(max_length=50, validators=[RegexValidator(r'^[a-zA-Z ]*$', message='Only letters and spaces are allowed.')])
     street_number = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(9999)]
     )
@@ -23,7 +23,16 @@ class Patient(models.Model):
     gender = models.CharField(max_length=6, choices=GENDER_CHOICES)
     phone_nb = models.PositiveIntegerField()
     birth_date = models.DateField()
-    insured = models.BooleanField()
+    insured = models.IntegerField(choices=[(0, 'Not Insured'), (1, 'Insured')])
+
+    def is_insured(self):
+        return self.insured == 1
+
+    is_insured.boolean = True  # This is used to display a nice True/False icon in the admin
+
+    def __str__(self):
+        return f"{self.firstname_patient} {self.lastname_patient}"
+
 
     def __str__(self):
         return f"{self.firstname_patient} {self.lastname_patient}"

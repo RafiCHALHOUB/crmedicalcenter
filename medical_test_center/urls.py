@@ -22,6 +22,7 @@ urlpatterns = [
     path('', homepage, name='homepage'),
     path('tests/', tests, name='tests'),
     path('team/',biologists,name='biologists'),
-    path('biologist/<int:biologistid>', display_biologist, name='show_biologist')
+    path('biologist/<int:biologistid>', display_biologist, name='show_biologist'),
+    path('medical-application-form/', MedicalApplicationFormView.as_view(), name='medical_application_form'),
 
 ]

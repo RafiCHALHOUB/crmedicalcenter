@@ -1,0 +1,16 @@
+<!-- medical_center/templates/medical_form.html -->
+
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/medical_form.css' %}">
+
+    <div class="form-container">
+        <h2>Medical Application Form</h2>
+        <form method="post" action="{% url 'medical_application_form' %}" class="medical-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

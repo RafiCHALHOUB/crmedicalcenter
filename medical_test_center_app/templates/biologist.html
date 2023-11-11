@@ -1,13 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Biologist</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/biologist_detail.css' %}">
 </head>
 <body>
-{{ biologist.ID_bio }}
-{{ biologist.firstname_bio }}
-{{ biologist.lastname_bio }}
-{{ biologist.specialty }}
+    <div class="container">
+        <h1>Biologist Details</h1>
+        <div class="biologist-info">
+            <span class="label">Biologist ID:</span> {{ biologist.ID_bio }}
+        </div>
+        <div class="biologist-info">
+            <span class="label">First Name:</span> {{ biologist.firstname_bio }}
+        </div>
+        <div class="biologist-info">
+            <span class="label">Last Name:</span> {{ biologist.lastname_bio }}
+        </div>
+        <div class="biologist-info">
+            <span class="label">Specialty:</span> {{ biologist.specialty }}
+        </div>
+    </div>
 </body>
 </html>

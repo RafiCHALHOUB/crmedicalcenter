@@ -1,10 +1,9 @@
 from django.http import HttpResponse
-from django.shortcuts import render
 from medical_test_center_app.models import *
 from django.shortcuts import render, redirect
-from .models import Bill
-from django.core.management.base import BaseCommand
 from medical_test_center_app.models import Test
+from django.views import View
+from .forms import MedicalApplicationForm  # Import your form class
 # Create your views here.
 def homepage(request,):
     return render(request, "homepage.html")
@@ -29,3 +28,23 @@ def display_biologist(request, biologistid):
         return render(request, "biologist.html",{"biologist" : biologist})
     else:
         return HttpResponse("Error")
+
+class MedicalApplicationFormView(View):
+    template_name = 'medical_form.html'
+
+    def get(self, request, *args, **kwargs):
+        form = MedicalApplicationForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request, *args, **kwargs):
+        form = MedicalApplicationForm(request.POST)
+        if form.is_valid():
+            # Process the form data and save it to the database
+            patient = form.save()  # This saves the form data and returns the Patient instance
+            # You can do additional processing with the patient instance if needed
+            # For example, you can print the patient ID
+            print(f"New patient ID: {patient.ID_patient}")
+            # Redirect to a success page or homepage
+            return redirect('homepage')
+        return render(request, self.template_name, {'form': form})
+
