@@ -13,17 +13,17 @@
 <body>
 {% block content %}
 <header class="slideshow-header">
+    <h1>CR Medical Center</h1>
+
     <div class="slideshow-container">
         <img class="mySlides" src="{% static 'img/mri.jpg' %}">
         <img class="mySlides" src="{% static 'img/xray.jpg' %}">
         <img class="mySlides" src="{% static 'img/blood.jpg' %}">
-        <img class="mySlides" src="{% static 'img/microscope.jpg' %}">
-        <img class="mySlides" src="{% static 'img/scan.jpg' %}">
-
+        <img class="mySlides" src="{% static 'img/micro.jpg' %}">
+        <img class="mySlides" src="{% static 'img/analysis.jpg' %}">
         <script src="{% static 'js/homepage.js' %}"></script>
 
     </div>
-    <h1>CR Medical Center</h1>
 </header>
 
 
@@ -61,7 +61,7 @@
 <section class="presentation" >
        <h2>Who are we?</h2>
     <p class="w3-justify">
-        CR Medical Center is a state-of-the-art medical testing center dedicated to providing comprehensive healthcare services. Our center offers a wide range of medical tests and diagnostics, all conducted by highly skilled healthcare specialists.
+        CR Medical Center is a medical testing center dedicated to providing comprehensive healthcare services. Our center offers a wide range of medical tests and diagnostics, all conducted by highly skilled healthcare specialists.
         We are committed to delivering accurate and timely results to ensure your well-being and peace of mind.
     </p>
 
@@ -81,3 +81,4 @@
 {% endblock %}
 </body>
 </html>
+

@@ -124,8 +124,9 @@ h1 {
     z-index: 1;
     text-align: center;
     color: white;
-    font-size: xxx-large;
-
+    font-size: 100px;
+    font-family: "Times New Roman";
+    -webkit-text-stroke: 1px steelblue;
 }
 
 /* Style for the presentation section */
