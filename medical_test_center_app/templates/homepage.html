@@ -6,79 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CR Medical Center</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
-
     <!-- Include Bootstrap CSS and JavaScript here if needed -->
 </head>
 
 <body>
-{% block content %}
-<header class="slideshow-header">
-    <h1>CR Medical Center</h1>
+    {% block content %}
+    <header class="slideshow-header">
+        <h1>CR Medical Center</h1>
+        <div class="slideshow-container">
+            <img class="mySlides" src="{% static 'img/mri.jpg' %}">
+            <img class="mySlides" src="{% static 'img/xray.jpg' %}">
+            <img class="mySlides" src="{% static 'img/blood.jpg' %}">
+            <img class="mySlides" src="{% static 'img/micro.jpg' %}">
+            <img class="mySlides" src="{% static 'img/analysis.jpg' %}">
+        </div>
+    </header>
 
-    <div class="slideshow-container">
-        <img class="mySlides" src="{% static 'img/mri.jpg' %}">
-        <img class="mySlides" src="{% static 'img/xray.jpg' %}">
-        <img class="mySlides" src="{% static 'img/blood.jpg' %}">
-        <img class="mySlides" src="{% static 'img/micro.jpg' %}">
-        <img class="mySlides" src="{% static 'img/analysis.jpg' %}">
-        <script src="{% static 'js/homepage.js' %}"></script>
+    <nav>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#" class="dropbtn menu-link">Home</a>
+                <div class="dropdown-content">
+                    <!-- Add home-related links here -->
+                </div>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#" class="dropbtn menu-link">About Us</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'biologists' %}" class="menu-link">Team</a>
+                    <a href="{% url 'tests' %}" class="menu-link">Tests</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#" class="dropbtn menu-link">Contact Us</a>
+                <div class="dropdown-content">
+                    <!-- Add contact-related links here -->
+                </div>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="dropdown"><a href="{% url 'admin:index' %}" class="menu-link">Admin login</a></li>
+        </ul>
+    </nav>
 
-    </div>
-</header>
+    <section class="presentation">
+        <h2>Who are we?</h2>
+        <p class="w3-justify">
+            CR Medical Center is a medical testing center dedicated to providing comprehensive healthcare services. Our center offers a wide range of medical tests and diagnostics, all conducted by highly skilled healthcare specialists.
+            We are committed to delivering accurate and timely results to ensure your well-being and peace of mind.
+        </p>
+    </section>
 
-
-<nav>
-    <ul class="menu">
-        <li class="dropdown">
-            <a href="#" class="dropbtn menu-link">Home</a>
-            <div class="dropdown-content">
-                <!-- Add home-related links here -->
-            </div>
-        </li>
-    </ul>
-    <ul class="menu">
-        <li class="dropdown">
-            <a href="#" class="dropbtn menu-link">About Us</a>
-            <div class="dropdown-content">
-                <a href="{% url 'biologists' %}" class="menu-link">Team</a>
-                <a href="{% url 'tests' %}" class="menu-link">Tests</a>
-            </div>
-        </li>
-    </ul>
-    <ul class="menu">
-        <li class="dropdown">
-            <a href="#" class="dropbtn menu-link">Contact Us</a>
-            <div class="dropdown-content">
-                <!-- Add contact-related links here -->
-            </div>
-        </li>
-    </ul>
-    <ul class="menu">
-        <li class="dropdown"><a href="{% url 'medical_application_form' %}" class="menu-link">Medical Application Form</a></li>
-    </ul>
-</nav>
-
-<section class="presentation" >
-       <h2>Who are we?</h2>
-    <p class="w3-justify">
-        CR Medical Center is a medical testing center dedicated to providing comprehensive healthcare services. Our center offers a wide range of medical tests and diagnostics, all conducted by highly skilled healthcare specialists.
-        We are committed to delivering accurate and timely results to ensure your well-being and peace of mind.
-    </p>
+<!-- Add these buttons inside your 'latest-news' section -->
+    <section class="latest-news">
+        <h2>Latest News</h2>
+        <button id="prev-button">Previous</button>
+        <button id="next-button">Next</button>
+        <div id="news-container" class="slideshow-news"></div>
+    </section>
 
 
-</section>
+    <main>
+        <p>Providing high-quality medical services for your needs.</p>
+        <a href="#">Learn More</a>
+    </main>
 
-
-
-<main>
-    <p>Providing high-quality medical services for your needs.</p>
-    <a href="#">Learn More</a>
-</main>
-
-<footer>
-    <p>&copy; 2023 CR Medical Center</p>
-</footer>
-{% endblock %}
+    <footer>
+        <p>&copy; 2023 CR Medical Center</p>
+    </footer>
+    {% endblock %}
+        <script src="{% static 'js/img.js' %}"></script>
+        <script src="{% static 'js/latestnews.js' %}"></script>
 </body>
 </html>
-

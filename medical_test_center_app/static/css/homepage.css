@@ -129,16 +129,17 @@ h1 {
     -webkit-text-stroke: 1px steelblue;
 }
 
+
 /* Style for the presentation section */
 .presentation {
     max-width: 600px;
-    margin: 0 auto; /* Center the content horizontally */
+    /* Center the content horizontally */
     padding: 20px;
     text-align: center;
     background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
+    margin: 30px auto 0;
 }
 
 /* Style for the video within the presentation section */
@@ -160,4 +161,89 @@ footer{
 
 }
 /* Add additional styles or adjust these styles as needed to match your design preferences. */
+
+
+/* Latest News Section */
+.latest-news {
+    background-color: steelblue; /* Background color for the entire section */
+    color: #fff; /* Text color */
+    padding: 50px 0; /* Padding for top and bottom */
+    margin-top: 50px;
+    position: relative;
+}
+
+.latest-news h2 {
+    text-align: center;
+    font-size: 2em; /* Adjust the font size */
+    margin-bottom: 30px;
+}
+
+.slideshow-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for each news slide */
+.news-mySlides {
+    display: none;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the news container */
+    background-color: whitesmoke; /* Background color for each news container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.news-content {
+    margin-bottom: 20px; /* Add some space between news items */
+
+}
+
+.news-content h3 {
+    color: #66ccff; /* Headline color */
+}
+
+.news-content p {
+    color: black; /* Text color */
+}
+
+/* Navigation dots for the slideshow */
+.news-dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #666; /* Inactive dot color */
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.news-dot.active {
+    background-color: #66ccff; /* Active dot color */
+}
+/* Add these styles to position the buttons */
+#prev-button,
+#next-button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for better appearance */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor on hover */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertically */
+}
+
+#prev-button {
+    left: 10px; /* Position on the left side */
+    position: absolute;
+    margin-top: 50px;
+}
+
+#next-button {
+    right: 10px; /* Position on the right side */
+    position: absolute;
+    margin-top: 50px;
+}
 
