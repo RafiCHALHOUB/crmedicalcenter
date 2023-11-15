@@ -16,10 +16,6 @@ def tests(request,):
 def biologists(request,):
     return render(request, "team.html", {"Biologists": Biologist.objects.all()})
 
-def biologist(request,):
-
-    return render(request, "biologist.html", {"Biologist": Biologist.objects.all()})
-
 
 def display_biologist(request, biologistid):
     biologist =Biologist.objects.filter(ID_bio=biologistid)

@@ -226,7 +226,7 @@ footer{
 /* Add these styles to position the buttons */
 #prev-button,
 #next-button {
-    background-color: #4CAF50; /* Green background color */
+    background-color: indianred; /* Green background color */
     color: white; /* White text color */
     padding: 10px 15px; /* Padding for better appearance */
     border: none; /* No border */

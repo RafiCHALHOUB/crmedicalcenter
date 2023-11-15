@@ -12,7 +12,7 @@
     <ul>
         {% for biologist in Biologists %}
             <li>
-                <a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.firstname_bio }}</a>
+                <a href="{% url 'show_biologist' biologist.ID_bio %}">Dr. {{ biologist.firstname_bio }} {{ biologist.lastname_bio }}</a>
             </li>
         {% endfor %}
     </ul>
