@@ -5,37 +5,60 @@
     <meta charset="UTF-8">
     <title>Our Team</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="path/to/jquery.tablesorter.min.js"></script> <!-- Adjust the path accordingly -->
-</head>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.combined.js" integrity="sha256-AQTn9CwiNvZG2zsoT0gswugjZp0alCQySLyt9brT9Cg="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.js" integrity="sha256-serXvhbeEKdQIfTFSD3wpNCGNx2+/9py7VXfwLhYTfk="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.widgets.js" integrity="sha256-U+0DXO4scYcNVpt7pnud6Fx3KZqK2I5mI6KOeAjSqOE="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/css/theme.bootstrap_3.min.css"
+        integrity="sha256-dXZ9g5NdsPlD0182JqLz9UFael+Ug5AYo63RfujWPu8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/css/theme.default.min.css"
+        integrity="sha256-kZJ4kB78IbXuxMtCpmaXzii8vxEKtu8pjicH62E0/qM=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/css/theme.bootstrap.min.css"
+        integrity="sha256-dXZ9g5NdsPlD0182JqLz9UFael+Ug5AYo63RfujWPu8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/css/jquery.tablesorter.pager.min.css"
+        integrity="sha256-x+whz5gQKEXx3S3pxwmxPhC1OWpRiHaPXUW5Yt8/fzg=" crossorigin="anonymous" />
+    <style>
+    </style>
 <body>
-<header>
-    <h1>Our Team</h1>
-            {% include 'navbar.html' %}
+    <header>
+        <h1>Our Team</h1>
+        {% include 'navbar.html' %}
+    </header>
 
-</header>
-
-    <table id="biologistsTable">
-        <thead>
+<table id="biologistsTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for biologist in Biologists %}
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <td>{{ biologist.ID_bio }}</td>
+                <td><a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.firstname_bio }}</a></td>
+                <td><a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.lastname_bio }}</a></td>
             </tr>
-        </thead>
-        <tbody>
-            {% for biologist in Biologists %}
-                <tr>
-                    <td><a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.firstname_bio }}</a></td>
-                    <td><a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.lastname_bio }}</a></td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        {% endfor %}
+    </tbody>
+</table>
+
 
     <!-- Add this script after including jQuery and TableSorter -->
     <script>
         $(document).ready(function() {
-            $('#biologistsTable').tablesorter();
+            $("#biologistsTable").tablesorter();
         });
     </script>
     {% include 'footer.html' %}

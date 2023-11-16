@@ -5,7 +5,7 @@ from medical_test_center_app.models import Test
 from django.views import View
 from .forms import MedicalApplicationForm
 from django.contrib.auth import logout
-
+from django.contrib import messages
 def homepage(request,):
     return render(request, "homepage.html")
 
@@ -31,6 +31,7 @@ def logoutview(request):
     # Redirect to the homepage.
     return redirect('/')  # Replace 'home' with the name of your homepage URL pattern.
 
+
 class MedicalApplicationFormView(View):
     template_name = 'medical_form.html'
 
@@ -46,7 +47,10 @@ class MedicalApplicationFormView(View):
             # You can do additional processing with the patient instance if needed
             # For example, you can print the patient ID
             print(f"New patient ID: {patient.ID_patient}")
-            # Redirect to a success page or homepage
-            return redirect('homepage')
+
+            # Redirect to the same page or any other page you want
+            return redirect('medical_application_form')
+
+        # If the form is not valid, display the form with errors
         return render(request, self.template_name, {'form': form})
 
