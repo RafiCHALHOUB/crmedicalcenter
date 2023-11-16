@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: white;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -71,8 +75,7 @@ nav {
 header {
     text-align: center;
     color: white;
-    padding: 50px ;
-
+    padding: 50px;
 }
 
 /* Add this to your CSS, e.g., homepage.css */
@@ -90,11 +93,11 @@ header {
     color: deepskyblue; /* Text color for main links */
     text-decoration: none; /* Remove underlines from links */
 }
-main{
+
+main {
     text-align: center;
 }
 
-/* Style the slideshow container and header */
 /* Style the slideshow container and header */
 .slideshow-header {
     position: relative;
@@ -125,27 +128,27 @@ h1 {
     text-align: center;
     color: white;
     font-size: 100px;
-    font-family: "Times New Roman";
-    -webkit-text-stroke: 1px steelblue;
+    font-family: Arial, sans-serif;
+    -webkit-text-stroke: 2px black;
 }
-
 
 /* Style for the presentation section */
 .presentation {
-    max-width: 600px;
+    max-width: 900px;
     /* Center the content horizontally */
     padding: 20px;
     text-align: center;
     background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 30px auto 0;
+    margin: 30px auto;
+    margin-top: 50px;
 }
 
-/* Style for the video within the presentation section */
-.presentation video {
-    display: block;
-    width: 100%;
+.presentation h2 {
+    text-align: center;
+    font-size: 2em; /* Adjust the font size */
+    margin-bottom: 30px;
 }
 
 /* Style for the paragraph within the presentation section */
@@ -155,17 +158,15 @@ h1 {
     line-height: 1.4;
     color: #333;
 }
-footer{
+
+footer {
     text-align: center;
     margin-top: 20px;
-
 }
-/* Add additional styles or adjust these styles as needed to match your design preferences. */
-
 
 /* Latest News Section */
 .latest-news {
-    background-color: steelblue; /* Background color for the entire section */
+    background-color: whitesmoke; /* Background color for the entire section */
     color: #fff; /* Text color */
     padding: 50px 0; /* Padding for top and bottom */
     margin-top: 50px;
@@ -176,6 +177,7 @@ footer{
     text-align: center;
     font-size: 2em; /* Adjust the font size */
     margin-bottom: 30px;
+    color: black;
 }
 
 .slideshow-news {
@@ -198,7 +200,6 @@ footer{
 
 .news-content {
     margin-bottom: 20px; /* Add some space between news items */
-
 }
 
 .news-content h3 {
@@ -223,10 +224,11 @@ footer{
 .news-dot.active {
     background-color: #66ccff; /* Active dot color */
 }
+
 /* Add these styles to position the buttons */
 #prev-button,
 #next-button {
-    background-color: indianred; /* Green background color */
+    background-color: steelblue; /* Green background color */
     color: white; /* White text color */
     padding: 10px 15px; /* Padding for better appearance */
     border: none; /* No border */
@@ -247,3 +249,55 @@ footer{
     margin-top: 50px;
 }
 
+#map {
+    height: 300px; /* Adjust the height as needed */
+    width: 80%;    /* Adjust the width as needed */
+    margin-top: 40px;
+    margin-bottom: 20px; /* Add space below the map */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Basic styling for your footer */
+footer {
+    background-color: steelblue; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px 0; /* Padding for top and bottom */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.2em; /* Adjust the font size */
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #66ccff; /* Link color */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright text at the bottom */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em; /* Adjust the font size */
+}

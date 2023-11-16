@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CR Medical Center</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
-    <!-- Include Bootstrap CSS and JavaScript here if needed -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+
 </head>
 
 <body>
@@ -49,17 +54,29 @@
             </li>
         </ul>
         <ul class="menu">
-            <li class="dropdown"><a href="{% url 'admin:index' %}" class="menu-link">Admin login</a></li>
+            <li class="dropdown"><a href="{% url 'login' %}" class="menu-link">Medical Patient Form</a></li>
         </ul>
+
     </nav>
 
-    <section class="presentation">
-        <h2>Who are we?</h2>
+   <section class="presentation">
+        <h2>Wo are we?</h2>
         <p class="w3-justify">
-            CR Medical Center is a medical testing center dedicated to providing comprehensive healthcare services. Our center offers a wide range of medical tests and diagnostics, all conducted by highly skilled healthcare specialists.
-            We are committed to delivering accurate and timely results to ensure your well-being and peace of mind.
+            Established in October 2023, CR Medical Center represents a new chapter in healthcare excellence. The center is driven by a vision to redefine healthcare standards in our community.        </p>
+
+        <p class="w3-justify">
+            Equipped with cutting-edge medical technology, CR Medical Center offers a comprehensive range of services, including routine blood tests, advanced imaging procedures such as X-rays, MRIs, and CT scans, and various other diagnostic solutions. Despite its recent establishment, the center has quickly gained recognition for its unwavering dedication to excellence.
         </p>
-    </section>
+
+        <p class="w3-justify">
+            The dedicated team of healthcare professionals at CR Medical Center is committed to providing personalized and compassionate care. Whether you require preventive screenings, specialized tests, or expert consultations, CR Medical Center is here to meet your healthcare needs.
+        </p>
+
+        <p class="w3-justify">
+            At CR Medical Center, the founders understand that healthcare extends beyond the treatment of ailments; it's about promoting overall well-being. Their mission is to cultivate a welcoming environment where preventive healthcare, specialized tests, and expert consultations seamlessly come together. Your health is not merely a priority; it's a partnership.        </p>
+   </section>
+
+
 
 <!-- Add these buttons inside your 'latest-news' section -->
     <section class="latest-news">
@@ -69,17 +86,50 @@
         <div id="news-container" class="slideshow-news"></div>
     </section>
 
+    <div id="map"></div>
 
-    <main>
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact 1</h3>
+            <p><strong>Contact Person:</strong> Cristel Al Sarrouh</p>
+            <p><strong>Phone Number:</strong> +33 609 656 222</p>
+            <p><strong>Email:</strong> cristel@crmedicalcenter.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Visit Us</h3>
+            <p>Luminy Faculty</p>
+            <p>Marseille, France</p>
+        </div>
+
+        <div class="footer-section">
+             <h3>Contact 2</h3>
+            <p><strong>Contact Person:</strong> Rafi Chalhoub</p>
+            <p><strong>Phone Number:</strong> +33 753946110</p>
+            <p><strong>Email:</strong> rafi@crmedicalcenter.com</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+           <main>
         <p>Providing high-quality medical services for your needs.</p>
-        <a href="#">Learn More</a>
     </main>
+        <p>&copy; 2023 CR Medical Center. All rights reserved.</p>
+    </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2023 CR Medical Center</p>
-    </footer>
+
+
+
+
     {% endblock %}
-        <script src="{% static 'js/img.js' %}"></script>
-        <script src="{% static 'js/latestnews.js' %}"></script>
+    <script src="{% static 'js/img.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    <script src="{% static 'js/latestnews.js' %}"></script>
+
 </body>
 </html>

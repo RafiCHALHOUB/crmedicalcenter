@@ -7,10 +7,11 @@
 
     <div class="form-container">
         <h2>Medical Application Form</h2>
-        <form method="post" action="{% url 'medical_application_form' %}" class="medical-form">
+            <form method="post" action="{% url 'medical_application_form' %}" class="medical-form">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Submit</button>
+                <a href="{% url 'logout' %}">logout</a>
         </form>
     </div>
 {% endblock %}

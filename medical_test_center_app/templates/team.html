@@ -1,20 +1,39 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Our Team</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/team.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="path/to/jquery.tablesorter.min.js"></script> <!-- Adjust the path accordingly -->
 </head>
 <body>
     <h1>Our Team</h1>
-    <ul>
-        {% for biologist in Biologists %}
-            <li>
-                <a href="{% url 'show_biologist' biologist.ID_bio %}">Dr. {{ biologist.firstname_bio }} {{ biologist.lastname_bio }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <table id="biologistsTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for biologist in Biologists %}
+                <tr>
+                    <td><a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.firstname_bio }}</a></td>
+                    <td><a href="{% url 'show_biologist' biologist.ID_bio %}">{{ biologist.lastname_bio }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Add this script after including jQuery and TableSorter -->
+    <script>
+        $(document).ready(function() {
+            $('#biologistsTable').tablesorter();
+        });
+    </script>
 </body>
 </html>

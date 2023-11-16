@@ -3,8 +3,9 @@ from medical_test_center_app.models import *
 from django.shortcuts import render, redirect
 from medical_test_center_app.models import Test
 from django.views import View
-from .forms import MedicalApplicationForm  # Import your form class
-# Create your views here.
+from .forms import MedicalApplicationForm
+from django.contrib.auth import logout
+
 def homepage(request,):
     return render(request, "homepage.html")
 
@@ -24,6 +25,11 @@ def display_biologist(request, biologistid):
         return render(request, "biologist.html",{"biologist" : biologist})
     else:
         return HttpResponse("Error")
+
+def logoutview(request):
+    logout(request)
+    # Redirect to the homepage.
+    return redirect('/')  # Replace 'home' with the name of your homepage URL pattern.
 
 class MedicalApplicationFormView(View):
     template_name = 'medical_form.html'

@@ -55,9 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to initialize the news slideshow
-// ... (previous code)
-
-// Function to initialize the news slideshow
 function initNewsSlideshow(totalSlides) {
   let newsIndex = 0;
   showNewsSlides(newsIndex);
@@ -100,4 +97,3 @@ function showNewsSlides(index) {
   }
   newsSlides[index].style.display = 'block';
 }
-

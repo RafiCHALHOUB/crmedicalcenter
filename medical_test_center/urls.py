@@ -16,13 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from medical_test_center_app.views import *
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', homepage, name='homepage'),
+    path('login/', LoginView.as_view(), name='login'),
     path('tests/', tests, name='tests'),
     path('team/',biologists,name='biologists'),
     path('biologist/<int:biologistid>', display_biologist, name='show_biologist'),
+    path('logout/', logoutview, name='logout'),
     path('medical-application-form/', MedicalApplicationFormView.as_view(), name='medical_application_form'),
 
 ]
