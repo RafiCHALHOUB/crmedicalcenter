@@ -2,7 +2,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
 }
@@ -47,7 +47,7 @@ textarea {
 }
 
 button {
-    background-color: #3498db;
+    background-color: steelblue;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -57,5 +57,5 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: steelblue;
 }

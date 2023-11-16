@@ -1,0 +1,42 @@
+footer {
+    background-color: steelblue;
+    color: #fff;
+    margin-top: 3%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #66ccff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright text at the bottom */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+}

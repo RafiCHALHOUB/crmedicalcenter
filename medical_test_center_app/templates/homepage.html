@@ -27,37 +27,7 @@
         </div>
     </header>
 
-    <nav>
-        <ul class="menu">
-            <li class="dropdown">
-                <a href="#" class="dropbtn menu-link">Home</a>
-                <div class="dropdown-content">
-                    <!-- Add home-related links here -->
-                </div>
-            </li>
-        </ul>
-        <ul class="menu">
-            <li class="dropdown">
-                <a href="#" class="dropbtn menu-link">About Us</a>
-                <div class="dropdown-content">
-                    <a href="{% url 'biologists' %}" class="menu-link">Team</a>
-                    <a href="{% url 'tests' %}" class="menu-link">Tests</a>
-                </div>
-            </li>
-        </ul>
-        <ul class="menu">
-            <li class="dropdown">
-                <a href="#" class="dropbtn menu-link">Contact Us</a>
-                <div class="dropdown-content">
-                    <!-- Add contact-related links here -->
-                </div>
-            </li>
-        </ul>
-        <ul class="menu">
-            <li class="dropdown"><a href="{% url 'login' %}" class="menu-link">Medical Patient Form</a></li>
-        </ul>
-
-    </nav>
+    {% include 'navbar.html' %}
 
    <section class="presentation">
         <h2>Wo are we?</h2>
@@ -86,47 +56,13 @@
         <div id="news-container" class="slideshow-news"></div>
     </section>
 
+
     <div id="map"></div>
 
 
-
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>Contact 1</h3>
-            <p><strong>Contact Person:</strong> Cristel Al Sarrouh</p>
-            <p><strong>Phone Number:</strong> +33 609 656 222</p>
-            <p><strong>Email:</strong> cristel@crmedicalcenter.com</p>
-        </div>
-
-        <div class="footer-section">
-            <h3>Visit Us</h3>
-            <p>Luminy Faculty</p>
-            <p>Marseille, France</p>
-        </div>
-
-        <div class="footer-section">
-             <h3>Contact 2</h3>
-            <p><strong>Contact Person:</strong> Rafi Chalhoub</p>
-            <p><strong>Phone Number:</strong> +33 753946110</p>
-            <p><strong>Email:</strong> rafi@crmedicalcenter.com</p>
-        </div>
-    </div>
-
-    <div class="copyright">
-           <main>
-        <p>Providing high-quality medical services for your needs.</p>
-    </main>
-        <p>&copy; 2023 CR Medical Center. All rights reserved.</p>
-    </div>
-</footer>
-
-
-
-
-
     {% endblock %}
+        {% include 'footer.html' %}
+
     <script src="{% static 'js/img.js' %}"></script>
     <script src="{% static 'js/map.js' %}"></script>
     <script src="{% static 'js/latestnews.js' %}"></script>

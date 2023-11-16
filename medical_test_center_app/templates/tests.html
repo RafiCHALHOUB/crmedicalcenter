@@ -10,7 +10,12 @@
 
 </head>
 <body>
-<h1>CR Medical Center tests</h1>
+<header>
+<h1>Our Tests</h1>
+        {% include 'navbar.html' %}
+
+</header>
+
 <table>
     <thead>
         <tr>
@@ -37,6 +42,8 @@
         $('table').DataTable(); // Assuming you have included the DataTables library
     });
 </script>
+    {% include 'footer.html' %}
+
 
 </body>
 </html>

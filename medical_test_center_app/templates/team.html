@@ -1,5 +1,3 @@
-
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +9,12 @@
     <script src="path/to/jquery.tablesorter.min.js"></script> <!-- Adjust the path accordingly -->
 </head>
 <body>
+<header>
     <h1>Our Team</h1>
+            {% include 'navbar.html' %}
+
+</header>
+
     <table id="biologistsTable">
         <thead>
             <tr>
@@ -35,5 +38,7 @@
             $('#biologistsTable').tablesorter();
         });
     </script>
+    {% include 'footer.html' %}
+
 </body>
 </html>

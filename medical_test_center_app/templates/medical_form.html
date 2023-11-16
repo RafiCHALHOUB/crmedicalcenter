@@ -11,7 +11,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Submit</button>
-                <a href="{% url 'logout' %}">logout</a>
         </form>
+     <a href="{% url 'logout' %}">logout</a>
     </div>
 {% endblock %}
