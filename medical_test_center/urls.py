@@ -26,5 +26,6 @@ urlpatterns = [
     path('biologist/<int:biologistid>', display_biologist, name='show_biologist'),
     path('logout/', logoutview, name='logout'),
     path('medical-application-form/', MedicalApplicationFormView.as_view(), name='medical_application_form'),
+    path('patients/',patients,name='patients')
 
 ]

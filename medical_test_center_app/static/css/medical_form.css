@@ -1,5 +1,4 @@
-/* static/css/medical_form.css */
-
+/* Resetting Default Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: whitesmoke;
@@ -7,6 +6,7 @@ body {
     padding: 0;
 }
 
+/* Form Container Styling */
 .form-container {
     max-width: 600px;
     margin: 50px auto;
@@ -16,20 +16,24 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Medical Form Styling */
 .medical-form {
     display: grid;
     gap: 10px;
 }
 
+/* Heading Styling */
 h2 {
     color: #333;
     text-align: center;
 }
 
+/* Label Styling */
 label {
     font-weight: bold;
 }
 
+/* Input Styling */
 input[type="text"],
 input[type="date"],
 input[type="email"] {
@@ -39,6 +43,7 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
+/* Textarea Styling */
 textarea {
     width: 100%;
     padding: 8px;
@@ -46,6 +51,7 @@ textarea {
     box-sizing: border-box;
 }
 
+/* Button Styling */
 button {
     background-color: steelblue;
     color: #fff;
@@ -56,6 +62,7 @@ button {
     font-size: 16px;
 }
 
+/* Button Hover Effect */
 button:hover {
     background-color: steelblue;
 }

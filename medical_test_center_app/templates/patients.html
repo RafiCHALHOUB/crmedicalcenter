@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tests List</title>
+    <link rel="stylesheet" href="{% static 'css/tests.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href ="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <script src = "https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+</head>
+<body>
+<header>
+<h1>Patients List</h1>
+        {% include 'navbar.html' %}
+
+</header>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID of the patient</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Birth date</th>
+            <th>Street number</th>
+            <th>Street name</th>
+            <th>Postal code</th>
+            <th>City name</th>
+            <th>Phone number</th>
+            <th>Gender</th>
+            <th>Insured</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for patient in Patients %}
+        <tr>
+            <td>{{ patient.ID_patient }}</td>
+            <td>{{ patient.firstname_patient }}</td>
+            <td>{{ patient.lastname_patient }}</td>
+            <td>{{ patient.birth_date }}</td>
+            <td>{{ patient.street_number }}</td>
+            <td>{{ patient.street_name }}</td>
+            <td>{{ patient.postal_code }}</td>
+            <td>{{ patient.city_name }}</td>
+            <td>{{ patient.phone_nb }}</td>
+            <td>{{ patient.gender }}</td>
+            <td>{{ patient.insured }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+     <a href="{% url 'logout' %}">logout</a>
+
+<!-- Add this script after including jQuery -->
+<script>
+    $(document).ready(function() {
+        $('table').DataTable(); // Assuming you have included the DataTables library
+    });
+</script>
+    {% include 'footer.html' %}
+
+
+</body>
+</html>

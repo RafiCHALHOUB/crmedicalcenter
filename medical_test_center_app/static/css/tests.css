@@ -1,3 +1,4 @@
+/* Reset styles for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -11,17 +12,18 @@ header h1 {
     background: steelblue;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
-
+/* Styling for table headers and cells */
 th, td {
     border: 1px solid #ddd;
     padding: 12px;
-    text-align: left;
+    text-align: center;
 }
 
+/* Styling for table headers */
 th {
-    background-color: steelblue; /* Blue color */
-    color: #fff; /* White text on blue background */
+    background-color: steelblue;
+    color: #fff;
 }

@@ -1,9 +1,11 @@
+/* Reset default margin and padding for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -11,7 +13,7 @@ body {
     padding: 20px;
 }
 
-/* Style the Our Team header */
+/* Styling for the Our Team header */
 header h1 {
     font-size: 2.5rem;
     padding: 20px;
@@ -21,6 +23,7 @@ header h1 {
     text-align: center; /* Center the text */
 }
 
+/* Container styling for content */
 .container {
     max-width: 900px;
     padding: 20px;
@@ -33,13 +36,12 @@ header h1 {
     font-size: large;
 }
 
-
+/* Styling for individual biologist information */
 .biologist-info {
     margin-bottom: 20px;
 }
 
+/* Styling for labels within biologist information */
 .label {
     font-weight: bold;
 }
-
-/* Add more styles as needed */

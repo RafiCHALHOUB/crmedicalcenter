@@ -1,28 +1,36 @@
+/* Footer Styles */
+
+/* Styling for the main footer container */
 footer {
     background-color: steelblue;
     color: #fff;
     margin-top: 3%;
 }
 
+/* Flex layout for the footer content sections */
 .footer-container {
     display: flex;
     justify-content: space-around;
 }
 
+/* Styling for individual sections within the footer */
 .footer-section {
     flex: 1;
     text-align: center;
 }
 
+/* Styling for section headings */
 .footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
 
+/* Styling for paragraphs within sections */
 .footer-section p {
     margin-bottom: 8px;
 }
 
+/* Styling for links within sections */
 .footer-section a {
     color: #66ccff;
     text-decoration: none;
@@ -30,11 +38,12 @@ footer {
     margin-bottom: 5px;
 }
 
+/* Hover effect for links */
 .footer-section a:hover {
     text-decoration: underline;
 }
 
-/* Copyright text at the bottom */
+/* Styling for the copyright text at the bottom */
 .copyright {
     text-align: center;
     margin-top: 20px;

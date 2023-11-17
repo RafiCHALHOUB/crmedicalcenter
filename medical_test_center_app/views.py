@@ -5,13 +5,15 @@ from medical_test_center_app.models import Test
 from django.views import View
 from .forms import MedicalApplicationForm
 from django.contrib.auth import logout
-from django.contrib import messages
+from medical_test_center_app.models import Patient
 def homepage(request,):
     return render(request, "homepage.html")
 
 
 def tests(request,):
     return render(request, "tests.html", {"Tests": Test.objects.all()})
+def patients(request,):
+    return render(request, "patients.html", {"Patients": Patient.objects.all()})
 
 
 def biologists(request,):
