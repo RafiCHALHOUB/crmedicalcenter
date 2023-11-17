@@ -2,11 +2,11 @@
 const apiEndpoint = "https://gnews.io/api/v4/search?q=Médecine&lang=fr&country=fr&max=10&apikey=ce16040df07ac247cb8a30d2ca7e3682";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Fetch data from the API
+  // Fetch data from the GNews API
   fetch(apiEndpoint)
     .then(response => response.json())
     .then(data => {
-      // Log the data to the console
+      // Log the fetched data to the console
       console.log("Fetched data:", data);
 
       // Get the news container element

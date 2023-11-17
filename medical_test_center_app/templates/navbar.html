@@ -1,36 +1,44 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
-
-
+    <!-- Include the styles for the navigation bar -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
 </head>
+
 <body>
-<nav>
+    <!-- Navigation Bar Section -->
+    <nav>
+        <!-- First Menu - Home -->
         <ul class="menu">
             <li class="dropdown">
                 <a href="{% url 'homepage' %}" class="dropbtn menu-link">Home</a>
                 <div class="dropdown-content">
-                    <!-- Add home-related links here -->
+                    <!-- Add home-related links here if needed -->
                 </div>
             </li>
         </ul>
+
+        <!-- Second Menu - About Us -->
         <ul class="menu">
             <li class="dropdown">
                 <a href="#" class="dropbtn menu-link">About Us</a>
                 <div class="dropdown-content">
+                    <!-- Links related to the 'About Us' section -->
                     <a href="{% url 'biologists' %}" class="menu-link">Our Team</a>
                     <a href="{% url 'tests' %}" class="menu-link">Our Tests</a>
                 </div>
             </li>
         </ul>
 
+        <!-- Third Menu - Medical Patient Form -->
         <ul class="menu">
-            <li class="dropdown"><a href="{% url 'login' %}" class="menu-link">Medical Patient Form</a></li>
+            <li class="dropdown">
+                <a href="{% url 'login' %}" class="menu-link">Medical Patient Form</a>
+            </li>
         </ul>
-
     </nav>
-
 </body>
+
 </html>

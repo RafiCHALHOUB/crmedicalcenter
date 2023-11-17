@@ -1,18 +1,25 @@
-<!-- medical_center/templates/medical_form.html -->
-
 {% load static %}
 
 {% block content %}
+    <!-- Link to External Stylesheet -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/medical_form.css' %}">
 
+    <!-- Medical Application Form Container -->
     <div class="form-container">
+        <!-- Form Heading -->
         <h2>Medical Application Form</h2>
-            <form method="post" action="{% url 'medical_application_form' %}" class="medical-form">
+
+        <!-- Medical Application Form Submission -->
+        <form method="post" action="{% url 'medical_application_form' %}" class="medical-form">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Submit</button>
         </form>
-     <a href="{% url 'logout' %}">logout</a>
+
+        <!-- Logout Link -->
+        <a href="{% url 'logout' %}">logout</a>
     </div>
-<a href="{% url 'patients' %}" class="button">Check patients</a>
+        <a href="{% url 'patients' %}" class="patient">Check patients</a>
+
 {% endblock %}
+

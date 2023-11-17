@@ -1,50 +1,67 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Metadata Section -->
     <meta charset="UTF-8">
     <title>Tests List</title>
-    <link rel="stylesheet" href="{% static 'css/tests.css' %}">
+
+    <!-- Link to External Stylesheet -->
+    <link rel="stylesheet" href="/static/css/tests.css">
+
+    <!-- Include jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href ="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
-    <script src = "https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+
+    <!-- DataTables JavaScript -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 </head>
+
 <body>
-<header>
-<h1>Our Tests</h1>
+    <!-- Header Section -->
+    <header>
+        <!-- Our Tests Header -->
+        <h1>Our Tests</h1>
+
+        <!-- Include Navigation Bar -->
         {% include 'navbar.html' %}
+    </header>
 
-</header>
+    <!-- Table Section -->
+    <table>
+        <thead>
+            <!-- Table Header Row -->
+            <tr>
+                <th>ID</th>
+                <th>Test name</th>
+                <th>Description</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through Tests and populate table rows -->
+            {% for test in Tests %}
+            <tr>
+                <td>{{ test.ID_test }}</td>
+                <td>{{ test.name_test }}</td>
+                <td>{{ test.description }}</td>
+                <td>{{ test.cost }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Test name</th>
-            <th>Description</th>
-            <th>Cost</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for test in Tests %}
-        <tr>
-            <td>{{ test.ID_test }}</td>
-            <td>{{ test.name_test }}</td>
-            <td>{{ test.description }}</td>
-            <td>{{ test.cost }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-<!-- Add this script after including jQuery -->
-<script>
-    $(document).ready(function() {
-        $('table').DataTable(); // Assuming you have included the DataTables library
-    });
-</script>
+    <!-- DataTables Initialization Script -->
+    <script>
+        $(document).ready(function() {
+            $('table').DataTable(); // Initialize DataTables assuming the library is included
+        });
+    </script>
+
+    <!-- Include Footer -->
     {% include 'footer.html' %}
-
-
 </body>
+
 </html>

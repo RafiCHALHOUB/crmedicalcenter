@@ -10,4 +10,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Add a marker to the map
 var marker = L.marker([43.2301, 5.4323]).addTo(mymap);
+
+// Add a popup to the marker
 marker.bindPopup("<b>Luminy Faculty - France</b>").openPopup();

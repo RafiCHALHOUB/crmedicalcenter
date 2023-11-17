@@ -1,24 +1,28 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CR Medical Center</title>
+    <!-- Include the homepage stylesheet -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <!-- Include Leaflet CSS for map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Include Leaflet JavaScript library for map -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-
-
 </head>
 
 <body>
+    <!-- Start of content block -->
     {% block content %}
+    <!-- Header with slideshow -->
     <header class="slideshow-header">
         <h1>CR Medical Center</h1>
+        <!-- Slideshow container -->
         <div class="slideshow-container">
+            <!-- Slides for the slideshow -->
             <img class="mySlides" src="{% static 'img/mri.jpg' %}">
             <img class="mySlides" src="{% static 'img/xray.jpg' %}">
             <img class="mySlides" src="{% static 'img/blood.jpg' %}">
@@ -27,12 +31,16 @@
         </div>
     </header>
 
+    <!-- Include the navigation bar -->
     {% include 'navbar.html' %}
 
-   <section class="presentation">
+    <!-- Presentation section -->
+    <section class="presentation">
         <h2>Who are we?</h2>
+        <!-- Paragraphs providing information about CR Medical Center -->
         <p class="w3-justify">
-            Established in October 2023, CR Medical Center represents a new chapter in healthcare excellence. The center is driven by a vision to redefine healthcare standards in our community.        </p>
+            Established in October 2023, CR Medical Center represents a new chapter in healthcare excellence. The center is driven by a vision to redefine healthcare standards in our community.
+        </p>
 
         <p class="w3-justify">
             Equipped with cutting-edge medical technology, CR Medical Center offers a comprehensive range of services, including routine blood tests, advanced imaging procedures such as X-rays, MRIs, and CT scans, and various other diagnostic solutions. Despite its recent establishment, the center has quickly gained recognition for its unwavering dedication to excellence.
@@ -43,12 +51,11 @@
         </p>
 
         <p class="w3-justify">
-            At CR Medical Center, the founders understand that healthcare extends beyond the treatment of ailments; it's about promoting overall well-being. Their mission is to cultivate a welcoming environment where preventive healthcare, specialized tests, and expert consultations seamlessly come together. Your health is not merely a priority; it's a partnership.        </p>
-   </section>
+            At CR Medical Center, the founders understand that healthcare extends beyond the treatment of ailments; it's about promoting overall well-being. Their mission is to cultivate a welcoming environment where preventive healthcare, specialized tests, and expert consultations seamlessly come together. Your health is not merely a priority; it's a partnership.
+        </p>
+    </section>
 
-
-
-<!-- Add these buttons inside your 'latest-news' section -->
+    <!-- Latest News section with buttons and slideshow container -->
     <section class="latest-news">
         <h2>Latest News</h2>
         <button id="prev-button">Previous</button>
@@ -56,16 +63,19 @@
         <div id="news-container" class="slideshow-news"></div>
     </section>
 
-
+    <!-- Map container -->
     <div id="map"></div>
 
-
+    <!-- End of content block -->
     {% endblock %}
-        {% include 'footer.html' %}
+    <!-- Include the footer -->
+    {% include 'footer.html' %}
 
+    <!-- Include scripts for image slideshow, map, and latest news -->
     <script src="{% static 'js/img.js' %}"></script>
     <script src="{% static 'js/map.js' %}"></script>
     <script src="{% static 'js/latestnews.js' %}"></script>
 
 </body>
+
 </html>

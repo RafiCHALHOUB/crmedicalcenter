@@ -1,12 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Character encoding and page title setup -->
     <meta charset="UTF-8">
     <title>Login</title>
+
+    <!-- External stylesheet for styling -->
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
+
 <body>
+    <!-- Login form -->
     <h2>Login</h2>
     <form method="post">
         {% csrf_token %}
@@ -14,4 +20,5 @@
         <button type="submit">Login</button>
     </form>
 </body>
+
 </html>

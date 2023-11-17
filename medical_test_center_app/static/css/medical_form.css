@@ -66,3 +66,16 @@ button {
 button:hover {
     background-color: steelblue;
 }
+.patient {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        }
+
