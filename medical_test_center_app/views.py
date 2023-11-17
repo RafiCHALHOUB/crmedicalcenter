@@ -48,6 +48,7 @@ def logoutview(request):
     logout(request)
     return redirect('/')
 
+
 class MedicalApplicationFormView(View):
     """
     View for handling medical application form submissions.

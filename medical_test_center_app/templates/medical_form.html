@@ -1,4 +1,7 @@
 {% load static %}
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
 {% block content %}
     <!-- Link to External Stylesheet -->
@@ -19,7 +22,18 @@
         <!-- Logout Link -->
         <a href="{% url 'logout' %}">logout</a>
     </div>
-        <a href="{% url 'patients' %}" class="patient">Check patients</a>
+    <a href="{% url 'patients' %}" class="patient">Check patients</a>
 
+    <!-- JavaScript to prevent going back to medical form after pressing back button -->
+    <script>
+        window.onload = function () {
+            if (window.history && window.history.pushState) {
+                window.history.pushState('forward', null, './#forward');
+                window.onpopstate = function () {
+                    window.history.pushState('forward', null, './#forward');
+                    // Add your redirection logic here if needed
+                };
+            }
+        }
+    </script>
 {% endblock %}
-

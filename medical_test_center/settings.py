@@ -124,3 +124,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'medical_test_center_app')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL='medical_application_form'
+
