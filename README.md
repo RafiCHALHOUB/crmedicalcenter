@@ -10,7 +10,8 @@ Follow these steps to set up the RC Medical Test Center on your local machine:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/medical_test_center.git
+    git clone https://github.com/RafiCHALHOUB/crmedicalcenter.git
+
     ```
 
 2. **Navigate to the project directory:**
@@ -80,6 +81,13 @@ To access the secretary-only features, use the following login credentials:
 
 - **rafi:** secretary_username
 - **Rafi.ch2000:** secretary_password
+
+
+## Deployment on PythonAnywhere
+
+This project has been successfully deployed on [PythonAnywhere](https://www.pythonanywhere.com/), and you can access the Medical Test Center by visiting the following URL:
+
+**[Medical Test Center on PythonAnywhere](https://yourusername.pythonanywhere.com/)**
 
 
 ## License

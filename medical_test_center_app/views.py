@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
@@ -47,14 +48,11 @@ def logoutview(request):
     """
     logout(request)
     return redirect('/')
-
-
 class MedicalApplicationFormView(View):
     """
     View for handling medical application form submissions.
     """
     template_name = 'medical_form.html'
-
     def get(self, request, *args, **kwargs):
         """
         Handle GET requests for the medical application form view.
@@ -73,8 +71,9 @@ class MedicalApplicationFormView(View):
             # Additional processing with the patient instance if needed
             print(f"New patient ID: {patient.ID_patient}")
 
-            # Redirect to the same page or any other page you want
-            return redirect('medical_application_form')
 
+
+            # Redirect to the same page or any other page you want
+            return render(request, 'medical_form.html',context=login_required())
         # If the form is not valid, display the form with errors
         return render(request, self.template_name, {'form': form})

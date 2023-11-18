@@ -9,7 +9,6 @@
 
     <!-- External stylesheet for styling -->
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
 </head>
 
 <body>
@@ -21,5 +20,16 @@
         <button type="submit">Login</button>
     </form>
 </body>
+
+<!-- JavaScript to prevent going back in browser history -->
+<script>
+    // Disable back navigation
+    window.history.forward();
+
+    // Function to prevent back navigation
+    function noBack() {
+        window.history.forward();
+    }
+</script>
 
 </html>
