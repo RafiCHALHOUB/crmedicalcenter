@@ -74,6 +74,6 @@ class MedicalApplicationFormView(View):
 
 
             # Redirect to the same page or any other page you want
-            return render(request, 'medical_form.html',context=login_required())
+            return redirect('medical_application_form')
         # If the form is not valid, display the form with errors
         return render(request, self.template_name, {'form': form})
